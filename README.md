@@ -1,7 +1,6 @@
 # Guide Touristique de Khenifra
 
-Un guide touristique complet et responsif pour la ville de Khenifra, au Maroc. Concu avec une approche professionnelle de type "Projet d'Entreprise" et optimise pour les plateformes web et mobiles.
-
+Un guide touristique complet et responsif pour la ville de Khenifra, au Maroc.  
 ## Vue d'ensemble
 
 Ce projet a ete entierement developpe en utilisant uniquement HTML5 et CSS Vanilla. Il sert de portail numerique pour l'ecotourisme a Khenifra, integrant un design immersif, des elements interactifs et une interface utilisateur epuree.
