@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Réservez votre séjour et circuit touristique à Khenifra.">
+    <title>Réservation | Khenifra Tourism</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+        <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent);"><path d="M12 2L2 7l10 5 10-5-10-5Z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                Khenifra<span>Tourism</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="lieux.html">Lieux</a></li>
+                <li><a href="reservation.html" class="active">Réservation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+        <div style="background-color: var(--primary); color: white; padding: 4rem 0;">
+        <div class="container text-center">
+            <h1 style="color: white; margin-bottom: 0.5rem;">Planifier votre Séjour</h1>
+            <p style="color: #cbd5e1; font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Remplissez ce formulaire pour nous permettre d'organiser une expérience sur-mesure au cœur du Moyen Atlas.</p>
+        </div>
+    </div>
+
+        <main class="section" style="padding-top: 3rem;">
+        <div class="container">
+            
+            <div class="card form-card">
+                <form id="form-reservation" action="#" method="post" novalidate>
+
+                                        <fieldset>
+                        <legend>Informations Personnelles</legend>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="nom" class="form-label">Nom complet *</label>
+                                <input type="text" id="nom" name="nom" class="form-control" placeholder="Ex: Ahmed Bennani" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Adresse e-mail *</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="contact@exemple.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone" class="form-label">Numéro de téléphone</label>
+                            <input type="text" id="telephone" name="telephone" class="form-control" placeholder="+212 600 000 000">
+                        </div>
+                    </fieldset>
+
+                                        <fieldset>
+                        <legend>Détails du Séjour</legend>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="date-arrivee" class="form-label">Date d'arrivée *</label>
+                                <input type="date" id="date-arrivee" name="date-arrivee" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="date-depart" class="form-label">Date de départ *</label>
+                                <input type="date" id="date-depart" name="date-depart" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="nb-personnes" class="form-label">Nombre de personnes *</label>
+                                <input type="number" id="nb-personnes" name="nb-personnes" class="form-control" min="1" value="2" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="ville-depart" class="form-label">Ville de départ</label>
+                                <input type="text" id="ville-depart" name="ville-depart" class="form-control" list="liste-villes" placeholder="Ex: Casablanca">
+                                <datalist id="liste-villes">
+                                    <option value="Casablanca">
+                                    <option value="Rabat">
+                                    <option value="Marrakech">
+                                    <option value="Fès">
+                                    <option value="Meknès">
+                                    <option value="Béni Mellal">
+                                    <option value="Agadir">
+                                    <option value="Tanger">
+                                </datalist>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Type de visite souhaitée *</label>
+                            <select name="type-visite" class="form-control" required>
+                                <option value="" disabled selected>Sélectionnez un circuit...</option>
+                                <option value="culturelle">Circuit Culturel & Historique (Kasbahs)</option>
+                                <option value="nature">Écotourisme & Forêts (Parc d'Ifrane, Lacs)</option>
+                                <option value="aventure">Randonnée et Aventure (Sommets)</option>
+                                <option value="gastronomique">Découverte Gastronomique Zayane</option>
+                                <option value="complete">Circuit Complet (Tout inclus)</option>
+                            </select>
+                        </div>
+                    </fieldset>
+
+                                        <fieldset>
+                        <legend>Hébergement</legend>
+                        <label class="form-label">Préférence d'hébergement</label>
+                        <div class="radio-group">
+                            <label class="radio-card">
+                                <input type="radio" name="hebergement" value="hotel" checked>
+                                Hôtel Premium
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="hebergement" value="appartement">
+                                Appartement privé
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="hebergement" value="maison-accueil">
+                                Maison d'hôtes (Gîte)
+                            </label>
+                        </div>
+
+                        <div class="form-group" style="margin-top: 1.5rem;">
+                            <label for="preferences" class="form-label">Demandes spéciales</label>
+                            <textarea id="preferences" name="preferences" class="form-control" placeholder="Allergies, accessibilité, lit bébé..."></textarea>
+                        </div>
+                    </fieldset>
+
+                                        <fieldset>
+                        <legend>Services Additionnels</legend>
+                        <div class="radio-group" style="grid-template-columns: 1fr 1fr;">
+                            <label class="checkbox-wrap">
+                                <input type="checkbox" name="services" value="guide"> Guide touristique local expert
+                            </label>
+                            <label class="checkbox-wrap">
+                                <input type="checkbox" name="services" value="transport"> Transport climatisé (Transfert)
+                            </label>
+                            <label class="checkbox-wrap">
+                                <input type="checkbox" name="services" value="repas"> Pension complète (Repas traditionnels)
+                            </label>
+                            <label class="checkbox-wrap">
+                                <input type="checkbox" name="services" value="photo"> Photographe professionnel
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <label class="checkbox-wrap" style="color: var(--text-muted); font-size: 0.95rem;">
+                            <input type="checkbox" name="rgpd" required>
+                            J'accepte que mes données soient traitées pour la gestion de ma réservation.
+                        </label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary" style="flex: 1;">Confirmer la Réservation</button>
+                        <button type="reset" class="btn btn-outline" style="border: 1px solid var(--border); color: var(--text-main);">Réinitialiser</button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+        <footer>
+        <div class="container">
+            <div class="footer-bottom" style="border: none; padding: 0;">
+                <p>&copy; 2026 Office du Tourisme de Khenifra. Conçu pour le Projet de Fin d'Études.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
